@@ -40,6 +40,7 @@ http.createServer((req, res) => {
       res.writeHead(200, { 'Content-Type': 'application/json' })
       res.end(JSON.stringify({ result: resp }))
     } catch (error: any) {
+      console.error(error)
       res.writeHead(500, { 'Content-Type': 'application/json' })
       res.end(JSON.stringify({ error: error.message }))
     }
