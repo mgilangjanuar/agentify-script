@@ -1,0 +1,26 @@
+{
+  "name": "agentception-vm",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "lint": "eslint -c .eslintrc.js .",
+    "build": "rimraf dist && tsc --noEmit false",
+    "start": "node --no-node-snapshot -r source-map-support/register -r dotenv/config -r module-alias/register ."
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "dotenv": "^16.4.5",
+    "eslint": "^9.6.0",
+    "module-alias": "^2.2.3",
+    "rimraf": "^6.0.0",
+    "source-map-support": "^0.5.21",
+    "typescript": "^5.5.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "isolated-vm": "^5.0.1"
+  }
+}
