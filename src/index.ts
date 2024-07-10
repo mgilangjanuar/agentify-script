@@ -1,7 +1,7 @@
 import http from 'http'
 import ivm from 'isolated-vm'
 
-const _runScript = async (code: string) => {
+const _runScriptExp = async (code: string) => {
   const isolate = new ivm.Isolate({ memoryLimit: 128 })
   const context = isolate.createContextSync()
   const jail = context.global
