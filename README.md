@@ -1,15 +1,24 @@
-# agentception-vm
+# agentception-script
 
-To install dependencies:
+This is an [Agentify](https://github.com/mgilangjanuar/agentify) dependency that allows you to run an isolated script in a node environment.
 
-```bash
-bun install
-```
-
-To run:
+## Installation
 
 ```bash
-bun run index.ts
+pnpm install
 ```
 
-This project was created using `bun init` in bun v1.1.18. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+## Environment Variables
+
+```[.env]
+PORT=4014
+SECRET="xxx"
+```
+
+## Usage
+
+```bash
+pnpm run build && pnpm start
+```
+
+Then, save this service URL and secret to the Agentify variables `SCRIPT_URL` and `SCRIPT_SECRET`.
